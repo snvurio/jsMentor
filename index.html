@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            font-size: 50px;
+            width: 500px;
+            height: 500px;
+            background-color: rgb(224, 224, 228);
+        }
+    </style>
+</head>
+<body>
+    <div id="btn">
+        <button id="text" onclick="ChangeColor()">눌러 보세요오</button>
+    </div>
+
+    <script>
+        const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
+        let colorindex = 0; 
+
+        function ChangeColor() {
+            const button = document.getElementById('text');
+            button.style.color = colors[colorindex];
+            colorindex = (colorindex + 1) % colors.length;
+        }
+    </script>
+</body>
+</html>
