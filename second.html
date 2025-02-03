@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>버튼 생성 예제</title>
+  <style>
+    button {
+        background-color: rgb(35, 107, 241);
+        border-radius: 10px;
+        width: 500px;
+        height: 50px;
+        color: white;
+        font-size: large;
+        border-style: none;
+        cursor: pointer;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .new-button {
+        background-color: rgb(66, 66, 66);
+        border-radius: 3em;
+        margin-top: 150px;
+    }
+  </style>
+</head>
+<body>
+  
+  <button id="btn">클릭하면 토스트 메세지가 나옵니다다!</button>
+
+  <script>
+    let created = false;
+
+    document.getElementById('btn').onclick = function() {
+      if (created) return;
+      created = true;
+
+      const btn = document.createElement('button');
+      btn.innerText = '토스트 메세지 입니다!';
+      btn.className = 'new-button';
+      document.body.appendChild(btn);
+    };
+  </script>
+</body>
+</html>
